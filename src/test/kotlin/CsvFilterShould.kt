@@ -1,7 +1,9 @@
+import csvFilter.CsvFilter
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
 class CsvFilterShould {
+
 
     @Test
     fun correct_lines_are_not_filtered(){
@@ -10,7 +12,8 @@ class CsvFilterShould {
         val result = CsvFilter().filter(
             listOf(headerLine, invoiceLine))
         assertThat(result).isEqualTo(
-            listOf(headerLine, invoiceLine));
+            listOf(headerLine, invoiceLine))
+
     }
 
 }
